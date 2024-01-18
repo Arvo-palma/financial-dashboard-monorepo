@@ -1,0 +1,12 @@
+{
+  "name": "financial-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "author": "Álvaro Palma",
+  "license": "MIT",
+  "workspaces": [
+    "apps/dashboard",
+    "apps/database"
+  ]
+}
