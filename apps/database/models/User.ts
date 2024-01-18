@@ -36,8 +36,19 @@ userSchema.pre("save", async function (next) {
 userSchema.methods.checkPassword = async function (
   password: string,
   dbPassword: string
-) {
+): Promise<boolean> {
   return await bcrypt.compare(password, dbPassword);
+};
+
+userSchema.methods.isCredentialsChanged = async function (
+  JWTTimestamp: number
+): Promise<boolean> {
+  if (this.updatedAt) {
+    const lastUpdateInMiliseconds = Math.ceil(this.updatedAt.getTime() / 1000);
+
+    return JWTTimestamp < lastUpdateInMiliseconds;
+  }
+  return false;
 };
 
 const User = mongoose.model("User", userSchema);

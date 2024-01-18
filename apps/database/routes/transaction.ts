@@ -1,13 +1,14 @@
 const router = require("express").Router();
 const transactionController = require("../controllers/transactionController.ts");
+const authController = require("../controllers/authController");
 
 router
   .route("/transactions")
-  .get((req, res) => transactionController.getAll(req, res));
+  .get(authController.protect, transactionController.getAll);
 
 // For project future updates:
 // router
 //   .route("/transactions")
-//   .post((req, res) => transactionController.create(req, res));
+//   .post(transactionController.create);
 
 module.exports = router;
