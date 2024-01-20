@@ -1,19 +1,11 @@
-const Transaction = require("../models/Transaction.ts");
+const transactionService = require("../services/transactionService");
 
 const transactionController = {
   getAll: async (req, res) => {
     try {
-      const { query } = req;
-      let queryStr = JSON.stringify(query);
-      const newQueryStr = queryStr.replace(
-        /\b(gte|gt|lte|lt)\b/g,
-        (match) => `$${match}`
-      );
-      const queryObj = JSON.parse(newQueryStr);
+      const report = await transactionService(req);
 
-      const transactions = await Transaction.find(queryObj);
-
-      res.json(transactions);
+      res.json(report);
     } catch (error) {
       res.status(404).json({
         status: "fail",
