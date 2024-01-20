@@ -20,6 +20,7 @@
     "start": "concurrently \"yarn run server\" \"yarn run dashboard\""
   },
   "devDependencies": {
+    "@types/cors": "^2.8.17",
     "nodemon": "^3.0.3",
     "ts-node": "^10.9.2"
   }
