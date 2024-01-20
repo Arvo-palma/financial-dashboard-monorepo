@@ -6,7 +6,7 @@
   "author": "Álvaro Palma",
   "license": "MIT",
   "workspaces": [
-    "apps/dashboard",
-    "apps/database"
+    "apps/frontend",
+    "apps/backend"
   ]
 }

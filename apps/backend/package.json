@@ -1,5 +1,5 @@
 {
-  "name": "database",
+  "name": "backend",
   "version": "1.0.0",
   "private": true,
   "main": "app.ts",
@@ -15,9 +15,9 @@
     "mongoose": "^8.1.0"
   },
   "scripts": {
-    "dashboard": "yarn --cwd ../dashboard dev",
+    "dashboard": "yarn --cwd ../frontend dev",
     "server": "nodemon app",
-    "start": "concurrently \"yarn run server\" \"yarn run dashboard\""
+    "start": "concurrently \"yarn run server\" \"yarn run frontend\""
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
