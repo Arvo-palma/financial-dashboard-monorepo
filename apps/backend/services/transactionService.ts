@@ -237,8 +237,6 @@ const transactionService = async (req) => {
   const { query } = req;
   const queryObj = queryFilterToMongoDBFilter(query);
 
-  console.log(queryObj);
-
   const transactions = await Transaction.find(queryObj);
 
   if (transactions.length <= 0) {
