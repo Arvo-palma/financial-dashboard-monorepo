@@ -52,6 +52,7 @@ const authController = {
     try {
       // Checking if user has a token
       const bearerToken = req.headers.authorization;
+
       let token: string;
       if (bearerToken && bearerToken.startsWith("bearer")) {
         token = bearerToken.split(" ")[1];
