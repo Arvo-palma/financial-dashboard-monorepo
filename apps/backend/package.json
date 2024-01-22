@@ -16,8 +16,8 @@
     "mongoose": "^8.1.0"
   },
   "scripts": {
-    "dashboard": "yarn --cwd ../frontend dev",
-    "server": "nodemon app",
+    "frontend": "yarn --cwd ../frontend dev",
+    "server": "npx ts-node app.ts",
     "start": "concurrently \"yarn run server\" \"yarn run frontend\""
   },
   "devDependencies": {
