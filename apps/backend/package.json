@@ -18,7 +18,7 @@
   },
   "scripts": {
     "frontend": "yarn --cwd ../frontend dev",
-    "server": "npx ts-node app.ts",
+    "server": "nodemon app",
     "start": "concurrently \"yarn run server\" \"yarn run frontend\""
   },
   "devDependencies": {
