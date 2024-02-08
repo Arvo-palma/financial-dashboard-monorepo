@@ -241,7 +241,7 @@ const transactionService = async (req) => {
 
   if (transactions.length <= 0) {
     return {
-      transactions: [],
+      transactionsByPeriod: [],
       income: 0,
       expenses: 0,
       pendingTransactions: 0,

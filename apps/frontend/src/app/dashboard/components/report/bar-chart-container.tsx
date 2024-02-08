@@ -1,6 +1,5 @@
 import Show from '@/app/core/components/show';
 import { Bar, BarChart, Label, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
-import { ChartLoader } from '../styles/chart-loader';
 import { formatCurrency } from './card';
 
 export type BarChartDataItemType = {
@@ -15,7 +14,7 @@ export interface BarChartContainerProps {
 
 export const BarChartContainer: React.FC<BarChartContainerProps> = ({ data }) => {
   return (
-    <Show when={!!data && data?.length > 0} fallback={<ChartLoader>...</ChartLoader>}>
+    <Show when={!!data && data?.length > 0} fallback={''}>
       <ResponsiveContainer width="100%" height={300}>
         <BarChart
           width={500}
