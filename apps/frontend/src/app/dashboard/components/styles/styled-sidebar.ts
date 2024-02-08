@@ -7,7 +7,7 @@ export const StyledSideBar = styled.aside`
   width: 100vw;
   height: 1.25rem;
 
-  @media (min-width: 640px) {
+  @media (min-width: 820px) {
     flex-direction: column;
     width: fit-content;
     height: 100vh;

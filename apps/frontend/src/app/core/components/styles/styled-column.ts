@@ -5,7 +5,7 @@ import Column from '../column';
 export const StyledMain = styled.main`
   display: flex;
   flex-direction: column;
-  @media (min-width: 640px) {
+  @media (min-width: 820px) {
     flex-direction: row;
   }
   width: 100%;
