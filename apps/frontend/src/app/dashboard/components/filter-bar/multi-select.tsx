@@ -17,9 +17,6 @@ export const MultiSelect: React.FC<MultiSelectProps> = ({
   onChange,
   name,
 }) => {
-  if (name === 'indutries') {
-    console.log({ selectedOptions });
-  }
   return (
     <Select
       onChange={(value) => onChange(value.map((item) => item.value))}

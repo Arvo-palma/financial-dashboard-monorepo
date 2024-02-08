@@ -47,8 +47,6 @@ const FilterBar: React.FC<FilterBarProps> = () => {
     value: account,
   }));
 
-  console.log({ industries, selectedIndustries });
-
   const handleDateChange = (type: string, date?: number) => {
     if (date) {
       const dateFilter: { [key: string]: number } =
