@@ -47,6 +47,8 @@ const FilterBar: React.FC<FilterBarProps> = () => {
     value: account,
   }));
 
+  console.log({ industries, selectedIndustries });
+
   const handleDateChange = (type: string, date?: number) => {
     if (date) {
       const dateFilter: { [key: string]: number } =
@@ -94,6 +96,7 @@ const FilterBar: React.FC<FilterBarProps> = () => {
             selectedOptions={selectedStates}
             isPending={isPending}
             options={stateOptions}
+            name="states"
           />
         </StyledSelectContainer>
         <StyledSelectContainer>
@@ -103,6 +106,7 @@ const FilterBar: React.FC<FilterBarProps> = () => {
             selectedOptions={selectedIndustries}
             isPending={isPending}
             options={industryOptions}
+            name="industries"
           />
         </StyledSelectContainer>
         <StyledSelectContainer>
@@ -112,6 +116,7 @@ const FilterBar: React.FC<FilterBarProps> = () => {
             selectedOptions={selectedAccounts}
             isPending={isPending}
             options={accountOptions}
+            name="accounts"
           />
         </StyledSelectContainer>
       </StyledSelectBar>

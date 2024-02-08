@@ -35,13 +35,13 @@ export const fromStorageToStateFilter = (filterQuery: string): FilterOptionsType
     ? parseInt(filterQuery.split('date[lte]=')[1].split('&')[0])
     : null;
   const states = filterQuery.includes('state[in]=')
-    ? filterQuery.split('state[in]=')[1].split('&')
+    ? [filterQuery.split('state[in]=')[1].replaceAll('[', '').replaceAll(']', '')]
     : [];
   const industries = filterQuery.includes('industry[in]=')
-    ? filterQuery.split('industry[in]=')[1].split('&')
+    ? [filterQuery.split('industry[in]=')[1].replaceAll('[', '').replaceAll(']', '')]
     : [];
   const accounts = filterQuery.includes('account[in]=')
-    ? filterQuery.split('account[in]=')[1].split('&')
+    ? [filterQuery.split('account[in]=')[1].replaceAll('[', '').replaceAll(']', '')]
     : [];
 
   return {

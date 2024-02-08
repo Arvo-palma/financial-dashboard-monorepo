@@ -7,6 +7,7 @@ interface MultiSelectProps {
   selectedOptions: OptionsType[];
   isPending: boolean;
   onChange: (value: string[]) => void;
+  name: string;
 }
 
 export const MultiSelect: React.FC<MultiSelectProps> = ({
@@ -14,14 +15,19 @@ export const MultiSelect: React.FC<MultiSelectProps> = ({
   selectedOptions,
   isPending,
   onChange,
+  name,
 }) => {
+  if (name === 'indutries') {
+    console.log({ selectedOptions });
+  }
   return (
     <Select
       onChange={(value) => onChange(value.map((item) => item.value))}
       defaultValue={selectedOptions}
+      value={selectedOptions}
       isMulti
       isLoading={isPending}
-      name="states"
+      name={name}
       options={options}
       className="basic-multi-select"
       styles={{

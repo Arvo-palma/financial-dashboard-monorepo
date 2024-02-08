@@ -24,7 +24,7 @@ const queryFilterToMongoDBFilter = (query) => {
           .split("[")[1]
           .split("]")[0]
           .split(",")
-          .map((option) => option.replace(/'/g, "").replace(" ", ""));
+          .map((option) => option.replace(/'/g, ""));
 
         queryObj[filter]["$in"] = arrayOptions;
       }
