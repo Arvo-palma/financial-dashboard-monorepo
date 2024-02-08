@@ -1,7 +1,7 @@
 import { ToastContainer } from 'react-toastify';
 import { styled } from 'styled-components';
 
-export const StyledContainer = styled(ToastContainer)`
+export const StyledToastContainer = styled(ToastContainer)`
   &&&.Toastify__toast-container {
     top: 5em !important;
     left: 10%;
@@ -19,5 +19,8 @@ export const StyledContainer = styled(ToastContainer)`
   .Toastify__toast-body {
     padding: 0;
     margin: 0;
+  }
+  .Toastify__close-button {
+    --bg-opacity: 0;
   }
 `;

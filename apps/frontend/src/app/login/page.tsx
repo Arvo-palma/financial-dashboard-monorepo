@@ -6,7 +6,7 @@ import {
   StyledMainColumn,
 } from '../core/components/styles/styled-column';
 import LoginForm from './components/login-screen';
-import { StyledContainer } from './components/styles/styled-toast-container';
+import { StyledToastContainer } from './components/styles/styled-toast-container';
 
 export interface PageProps {}
 const Page: React.FC<PageProps> = () => {
@@ -17,7 +17,13 @@ const Page: React.FC<PageProps> = () => {
           <LoginForm />
         </StyledLoginFormContainer>
       </StyledMainColumn>
-      <StyledContainer hideProgressBar={true} icon={false} />
+      <StyledToastContainer
+        hideProgressBar={true}
+        autoClose={3000}
+        closeOnClick={true}
+        closeButton={false}
+        icon={false}
+      />
     </StyledMain>
   );
 };
